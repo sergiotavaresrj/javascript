@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <style>
+       div#res {
+           margin-top: 13px;
+               }
+               h1 {
+                   color: blue;
+                   font: normal 25pt Arial;
+               }
+               input {
+                   color: rgb(0, 0, 0); 
+                   background-color: rgb(182, 226, 112);
+                }
+             
+                   </style>
+    <h1>Estrangeiro Ou Não</h1>
+    Qual é o seu país? <input type="string" name="txtp1" id="txtp1">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id= 'res'>Resultado</div>
+    <script>
+        function verificar() {
+            var pp1 = document.querySelector('input#txtp1')
+            var res = document.querySelector('div#res')
+            var pp2 = (pp1.value)
+            res.innerHTML = `Legal o seu país é <strong>${pp2}</strong>`
+            if (pp2 == 'Brasil'){
+                res.innerHTML += '<p>Você é Brasileiro!</p>'
+            }
+            else {
+                res.innerHTML += '<p>Você é Estrangeiro!</p>'
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
